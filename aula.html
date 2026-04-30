@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aula – POO</title>
+  <meta name="description" content="Visualização de aula do curso de Programação Orientada à Objetos." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="lesson-page">
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <a href="index.html" class="logo">
+      <img src="assets/POO-Logo.png" alt="POO" class="logo-img-main" />
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-link">Início</a></li>
+      <li><a href="aulas.html" class="nav-link active">Aulas</a></li>
+      <li><a href="material.html" class="nav-link">Material Complementar</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="theme-toggle" id="themeToggle" title="Alternar tema" aria-label="Alternar tema">
+        <span class="theme-icon-sun">☀️</span>
+        <span class="theme-icon-moon">🌙</span>
+      </button>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- BREADCRUMB -->
+  <div class="breadcrumb-bar">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="breadcrumb">
+        <a href="aulas.html">Módulo 2</a>
+        <span class="breadcrumb-sep">→</span>
+        <span>Apresentando o POO</span>
+        <span class="breadcrumb-sep">→</span>
+        <span>Aula 3</span>
+      </nav>
+    </div>
+  </div>
+
+  <!-- LESSON LAYOUT -->
+  <div class="lesson-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="lesson-sidebar" id="lessonSidebar">
+      <div class="sidebar-module-label">Módulo 2</div>
+      <div class="sidebar-module-title">Apresentando o POO</div>
+      <nav class="sidebar-lessons">
+        <a href="aula.html?modulo=2&aula=1" class="sidebar-lesson" data-aula="1">1. Encapsulamento</a>
+        <a href="aula.html?modulo=2&aula=2" class="sidebar-lesson" data-aula="2">2. Exemplo de encapsulamento</a>
+        <a href="aula.html?modulo=2&aula=3" class="sidebar-lesson active" data-aula="3">3. Herança</a>
+        <a href="aula.html?modulo=2&aula=4" class="sidebar-lesson" data-aula="4">4. Exemplo de herança</a>
+        <a href="aula.html?modulo=2&aula=5" class="sidebar-lesson" data-aula="5">5. Interface</a>
+        <a href="aula.html?modulo=2&aula=6" class="sidebar-lesson" data-aula="6">6. Exemplo de interface</a>
+        <a href="aula.html?modulo=2&aula=7" class="sidebar-lesson" data-aula="7">7. Polimorfismo</a>
+        <a href="aula.html?modulo=2&aula=8" class="sidebar-lesson" data-aula="8">8. Exemplo de Polimorfismo</a>
+        <a href="aula.html?modulo=2&aula=9" class="sidebar-lesson" data-aula="9">9. Abstração</a>
+        <a href="aula.html?modulo=2&aula=10" class="sidebar-lesson" data-aula="10">10. Exemplo de abstração</a>
+      </nav>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="lesson-main" id="lessonContent">
+
+      <!-- LESSON: HERANÇA (texto com código) -->
+      <div class="lesson-block" id="lesson-heranca">
+        <h1 class="lesson-title">Herança</h1>
+        <p class="lesson-intro">Herança permite que uma classe erde atributos e métodos de outra classe, promovendo reutilização de código.</p>
+
+        <!-- CODE BLOCK com TABS -->
+        <div class="code-block-container">
+          <div class="code-tabs">
+            <button class="code-tab active" data-lang="java" id="tab-java">Java</button>
+            <button class="code-tab" data-lang="python" id="tab-python">Python</button>
+            <button class="code-tab" data-lang="cpp" id="tab-cpp">C++</button>
+          </div>
+          <div class="code-area">
+            <!-- JAVA -->
+            <pre class="code-content active" id="code-java"><code><span class="kw">class</span> <span class="cls">Animal</span>{
+  <span class="kw">void</span> <span class="fn">emitirSom</span>(){
+    System.out.<span class="fn">println</span>(<span class="str">"Som de animal"</span>);
+  }
+}
+<span class="kw">class</span> <span class="cls">Cachorro</span> <span class="kw">extends</span> <span class="cls">Animal</span>{
+  <span class="kw">void</span> <span class="fn">emitirSom</span>(){
+    System.out.<span class="fn">println</span>(<span class="str">"Au au"</span>);
+  }
+}</code></pre>
+            <!-- PYTHON -->
+            <pre class="code-content" id="code-python"><code><span class="kw">class</span> <span class="cls">Animal</span>:
+  <span class="kw">def</span> <span class="fn">emitir_som</span>(<span class="kw">self</span>):
+    <span class="fn">print</span>(<span class="str">"Som de animal"</span>)
+
+<span class="kw">class</span> <span class="cls">Cachorro</span>(<span class="cls">Animal</span>):
+  <span class="kw">def</span> <span class="fn">emitir_som</span>(<span class="kw">self</span>):
+    <span class="fn">print</span>(<span class="str">"Au au"</span>)</code></pre>
+            <!-- C++ -->
+            <pre class="code-content" id="code-cpp"><code><span class="kw">class</span> <span class="cls">Animal</span> {
+<span class="kw">public</span>:
+  <span class="kw">virtual void</span> <span class="fn">emitirSom</span>() {
+    cout &lt;&lt; <span class="str">"Som de animal"</span>;
+  }
+};
+<span class="kw">class</span> <span class="cls">Cachorro</span> : <span class="kw">public</span> <span class="cls">Animal</span> {
+<span class="kw">public</span>:
+  <span class="kw">void</span> <span class="fn">emitirSom</span>() <span class="kw">override</span> {
+    cout &lt;&lt; <span class="str">"Au au"</span>;
+  }
+};</code></pre>
+          </div>
+        </div>
+
+        <!-- CALLOUT -->
+        <div class="lesson-callout">
+          <p>A classe <span class="highlight-green">Cachorro</span> herda da classe <span class="highlight-green">Animal</span> e sobrescreve o método <span class="highlight-cyan">emitirSom</span>()</p>
+        </div>
+
+        <!-- TEXTO ADICIONAL -->
+        <div class="lesson-text-section">
+          <h2>Por que usar Herança?</h2>
+          <p>A herança é um dos pilares da POO e permite que você <strong>reaproveite código</strong> já escrito, evitando duplicação e facilitando a manutenção do sistema.</p>
+          <ul class="lesson-list">
+            <li>Evita repetição de código</li>
+            <li>Facilita a extensão de funcionalidades</li>
+            <li>Organiza hierarquias de classes</li>
+            <li>Facilita o polimorfismo</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- LESSON: INTERFACE (vídeo) — oculto por padrão, JS exibe conforme URL -->
+      <div class="lesson-block hidden" id="lesson-interface">
+        <h1 class="lesson-title">Interface</h1>
+        <p class="lesson-intro">Uma interface define um contrato que as classes devem cumprir, estabelecendo quais métodos precisam ser implementados.</p>
+
+        <!-- VIDEO EMBED -->
+        <div class="video-container">
+          <div class="video-wrapper">
+            <iframe
+              id="lessonVideo"
+              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+              title="Aula de Interface em POO"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+
+        <div class="lesson-text-section">
+          <h2>O que é uma Interface?</h2>
+          <p>Em Java, uma <strong>interface</strong> é um tipo abstrato que define um conjunto de métodos que uma classe deve implementar, sem fornecer a implementação.</p>
+        </div>
+
+        <div class="code-block-container">
+          <div class="code-tabs">
+            <button class="code-tab active" data-lang="java2" id="tab-java2">Java</button>
+          </div>
+          <div class="code-area">
+            <pre class="code-content active" id="code-java2"><code><span class="kw">interface</span> <span class="cls">Animal</span> {
+  <span class="kw">void</span> <span class="fn">emitirSom</span>();
+}
+<span class="kw">class</span> <span class="cls">Cachorro</span> <span class="kw">implements</span> <span class="cls">Animal</span> {
+  <span class="kw">public void</span> <span class="fn">emitirSom</span>() {
+    System.out.<span class="fn">println</span>(<span class="str">"Au au"</span>);
+  }
+}</code></pre>
+          </div>
+        </div>
+      </div>
+
+      <!-- NAVEGAÇÃO ENTRE AULAS -->
+      <div class="lesson-nav-buttons">
+        <button class="btn-lesson-nav prev" id="prevLesson">← Aula anterior</button>
+        <button class="btn-lesson-nav next" id="nextLesson">Próxima aula →</button>
+      </div>
+
+    </main>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-brand">
+        <span class="logo-text">🎓 POO</span>
+        <p>Programação Orientada à Objetos</p>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Início</a>
+        <a href="aulas.html">Aulas</a>
+        <a href="material.html">Material</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/aula.js"></script>
+</body>
+</html>

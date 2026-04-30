@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Material Complementar – POO</title>
+  <meta name="description" content="Artigos, vídeos e exercícios complementares do curso de Programação Orientada à Objetos." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <a href="index.html" class="logo">
+      <img src="assets/POO-Logo.png" alt="POO" class="logo-img-main" />
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-link">Início</a></li>
+      <li><a href="aulas.html" class="nav-link">Aulas</a></li>
+      <li><a href="material.html" class="nav-link active">Material Complementar</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="theme-toggle" id="themeToggle" title="Alternar tema" aria-label="Alternar tema">
+        <span class="theme-icon-sun">☀️</span>
+        <span class="theme-icon-moon">🌙</span>
+      </button>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <div class="page-header">
+    <div class="container">
+      <h1 class="page-title">Material complementar</h1>
+    </div>
+  </div>
+
+  <!-- FILTER TABS -->
+  <section class="material-section">
+    <div class="container">
+      <div class="filter-tabs" role="tablist" aria-label="Filtro de material">
+        <button class="filter-tab active" data-filter="todos" id="filter-todos" role="tab" aria-selected="true">TODOS</button>
+        <button class="filter-tab" data-filter="artigo" id="filter-artigos" role="tab" aria-selected="false">ARTIGOS</button>
+        <button class="filter-tab" data-filter="video" id="filter-videos" role="tab" aria-selected="false">VÍDEOS</button>
+        <button class="filter-tab" data-filter="exercicio" id="filter-exercicios" role="tab" aria-selected="false">EXERCÍCIOS</button>
+      </div>
+
+      <!-- CARDS GRID -->
+      <div class="material-grid" id="materialGrid">
+
+        <!-- Card 1: Artigo -->
+        <div class="material-card featured" data-type="artigo">
+          <div class="material-type-badge artigo">ARTIGO</div>
+          <h2 class="material-card-title">O que é programação orientada à objetos?</h2>
+          <p class="material-card-desc">Um guia completo para entender os conceitos fundamentais de POO.</p>
+          <button class="btn-material artigo" onclick="openMaterial('artigo1')">LER AGORA</button>
+        </div>
+
+        <!-- Card 2: E-book -->
+        <div class="material-card" data-type="artigo">
+          <div class="material-type-badge ebook">E-BOOK</div>
+          <h2 class="material-card-title">POO com Java para iniciantes</h2>
+          <p class="material-card-desc">E-book introdutório com exemplos práticos em Java.</p>
+          <button class="btn-material ebook" onclick="openMaterial('ebook1')">DOWNLOAD</button>
+        </div>
+
+        <!-- Card 3: Vídeo -->
+        <div class="material-card" data-type="video">
+          <div class="material-type-badge video">VÍDEO</div>
+          <h2 class="material-card-title">Herança e polimorfismo na prática</h2>
+          <p class="material-card-desc">Vídeo aula explicando herança e polimorfismo com exemplos.</p>
+          <button class="btn-material video" onclick="openVideo('https://www.youtube.com/embed/dQw4w9WgXcQ', 'Herança e polimorfismo na prática')">Assistir</button>
+        </div>
+
+        <!-- Card 4: Artigo -->
+        <div class="material-card" data-type="artigo">
+          <div class="material-type-badge artigo">ARTIGO</div>
+          <h2 class="material-card-title">Interfaces em POO</h2>
+          <p class="material-card-desc">Entenda como as interfaces ajudam na construção de sistemas flexíveis.</p>
+          <button class="btn-material artigo" onclick="openMaterial('artigo2')">LER AGORA</button>
+        </div>
+
+        <!-- Card 5: E-book -->
+        <div class="material-card" data-type="artigo">
+          <div class="material-type-badge ebook">E-BOOK</div>
+          <h2 class="material-card-title">Boas práticas e clean code</h2>
+          <p class="material-card-desc">Aprenda boas práticas para escrever código limpo e sustentável.</p>
+          <button class="btn-material ebook" onclick="openMaterial('ebook2')">DOWNLOAD</button>
+        </div>
+
+        <!-- Card 6: Exercício -->
+        <div class="material-card" data-type="exercicio">
+          <div class="material-type-badge exercicio">EXERCÍCIOS</div>
+          <h2 class="material-card-title">Exercícios de POO com resolução</h2>
+          <p class="material-card-desc">Vídeo aula explicando herança e polimorfismo com exemplos.</p>
+          <button class="btn-material exercicio" onclick="openMaterial('exercicio1')">RESOLVER</button>
+        </div>
+
+        <!-- Card 7: Vídeo -->
+        <div class="material-card" data-type="video">
+          <div class="material-type-badge video">VÍDEO</div>
+          <h2 class="material-card-title">Design Patterns explicados</h2>
+          <p class="material-card-desc">Uma visão geral sobre os principais padrões de projeto em POO.</p>
+          <button class="btn-material video" onclick="openVideo('https://www.youtube.com/embed/dQw4w9WgXcQ', 'Design Patterns explicados')">Assistir</button>
+        </div>
+
+        <!-- Card 8: Exercício -->
+        <div class="material-card" data-type="exercicio">
+          <div class="material-type-badge exercicio">EXERCÍCIOS</div>
+          <h2 class="material-card-title">Desafio: Refatore este código</h2>
+          <p class="material-card-desc">Pratique clean code refatorando exemplos reais com má qualidade.</p>
+          <button class="btn-material exercicio" onclick="openMaterial('exercicio2')">RESOLVER</button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- MODAL VÍDEO -->
+  <div class="modal-overlay" id="videoModal">
+    <div class="modal-content video-modal">
+      <button class="modal-close" id="closeVideoModal" aria-label="Fechar">✕</button>
+      <h2 class="modal-title" id="videoModalTitle">Título do Vídeo</h2>
+      <div class="video-container">
+        <div class="video-wrapper">
+          <iframe id="modalVideoIframe" src="" title="Vídeo" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL ARTIGO -->
+  <div class="modal-overlay" id="materialModal">
+    <div class="modal-content material-modal">
+      <button class="modal-close" id="closeMaterialModal" aria-label="Fechar">✕</button>
+      <div id="materialModalContent"></div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-brand">
+        <span class="logo-text">🎓 POO</span>
+        <p>Programação Orientada à Objetos</p>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Início</a>
+        <a href="aulas.html">Aulas</a>
+        <a href="material.html">Material</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/material.js"></script>
+</body>
+</html>
