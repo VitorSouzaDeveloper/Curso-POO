@@ -51,4 +51,42 @@ document.addEventListener('DOMContentLoaded', () => {
       if (target) target.classList.add('active');
     });
   });
+
+  // --- Update Progress Bars (aulas.html) ---
+  const overallProgressEl = document.querySelector('.overall-progress');
+  if (overallProgressEl) {
+    const completedData = JSON.parse(localStorage.getItem('poo-completed-lessons') || '{}');
+    let totalCompleted = 0;
+    const totalAulas = 9; // 4 + 3 + 2
+
+    const moduleTotals = { 1: 4, 2: 3, 3: 2 };
+
+    document.querySelectorAll('.module-card').forEach(card => {
+      const modId = card.getAttribute('data-module');
+      if (moduleTotals[modId]) {
+        let modCompleted = 0;
+        for (let i = 1; i <= moduleTotals[modId]; i++) {
+          const lessonLink = card.querySelector(`a[href="aula.html?modulo=${modId}&aula=${i}"]`);
+          if (completedData[`${modId}-${i}`]) {
+            modCompleted++;
+            totalCompleted++;
+            if (lessonLink) {
+              const iconSpan = lessonLink.querySelector('.lesson-icon');
+              if (iconSpan) iconSpan.outerHTML = '<i class="ph-fill ph-check-circle lesson-icon" style="color:#2ecc71;"></i>';
+            }
+          }
+        }
+        
+        const modPercent = Math.round((modCompleted / moduleTotals[modId]) * 100);
+        card.querySelector('.module-lessons').textContent = `${modCompleted}/${moduleTotals[modId]} aulas`;
+        card.querySelector('.module-percent').textContent = `${modPercent}%`;
+        card.querySelector('.progress-fill').style.width = `${modPercent}%`;
+      }
+    });
+
+    const overallPercent = Math.round((totalCompleted / totalAulas) * 100);
+    overallProgressEl.querySelector('.overall-lessons').textContent = `${totalCompleted}/${totalAulas} aulas`;
+    overallProgressEl.querySelector('.overall-percent').textContent = `${overallPercent}%`;
+    overallProgressEl.querySelector('.progress-fill').style.width = `${overallPercent}%`;
+  }
 });

@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
 </head>
 <body>
 
@@ -24,8 +25,8 @@
     </ul>
     <div class="nav-actions">
       <button class="theme-toggle" id="themeToggle" title="Alternar tema" aria-label="Alternar tema">
-        <span class="theme-icon-sun">☀️</span>
-        <span class="theme-icon-moon">🌙</span>
+        <i class="ph-fill ph-sun theme-icon-sun" style="font-size: 1.2rem;"></i>
+        <i class="ph-fill ph-moon theme-icon-moon" style="font-size: 1.2rem;"></i>
       </button>
     </div>
     <button class="hamburger" id="hamburger" aria-label="Menu">
@@ -53,68 +54,28 @@
       <!-- CARDS GRID -->
       <div class="material-grid" id="materialGrid">
 
-        <!-- Card 1: Artigo -->
+        <!-- Módulo 1 Slides -->
         <div class="material-card featured" data-type="artigo">
-          <div class="material-type-badge artigo">ARTIGO</div>
-          <h2 class="material-card-title">O que é programação orientada à objetos?</h2>
-          <p class="material-card-desc">Um guia completo para entender os conceitos fundamentais de POO.</p>
-          <button class="btn-material artigo" onclick="openMaterial('artigo1')">LER AGORA</button>
+          <div class="material-type-badge ebook">SLIDES</div>
+          <h2 class="material-card-title">Slides Módulo 1 - Introdução</h2>
+          <p class="material-card-desc">Material de apoio da primeira aula do curso de POO.</p>
+          <a class="btn-material ebook" style="text-decoration: none; display: inline-block; text-align: center;" href="https://drive.google.com/file/d/1ZNyInLPSY1sMduMQnjiRwxnUFZ-JXIjk/view?usp=sharing" target="_blank">BAIXAR</a>
         </div>
 
-        <!-- Card 2: E-book -->
+        <!-- Módulo 2 Slides -->
         <div class="material-card" data-type="artigo">
-          <div class="material-type-badge ebook">E-BOOK</div>
-          <h2 class="material-card-title">POO com Java para iniciantes</h2>
-          <p class="material-card-desc">E-book introdutório com exemplos práticos em Java.</p>
-          <button class="btn-material ebook" onclick="openMaterial('ebook1')">DOWNLOAD</button>
+          <div class="material-type-badge ebook">SLIDES</div>
+          <h2 class="material-card-title">Slides Módulo 2 - Aprofundando em POO</h2>
+          <p class="material-card-desc">Material de apoio com conceitos avançados e exemplos práticos.</p>
+          <a class="btn-material ebook" style="text-decoration: none; display: inline-block; text-align: center;" href="https://drive.google.com/file/d/1gzualHyracTx4nt7CE-IEFztExmppDiD/view?usp=sharing" target="_blank">BAIXAR</a>
         </div>
 
-        <!-- Card 3: Vídeo -->
-        <div class="material-card" data-type="video">
-          <div class="material-type-badge video">VÍDEO</div>
-          <h2 class="material-card-title">Herança e polimorfismo na prática</h2>
-          <p class="material-card-desc">Vídeo aula explicando herança e polimorfismo com exemplos.</p>
-          <button class="btn-material video" onclick="openVideo('https://www.youtube.com/embed/dQw4w9WgXcQ', 'Herança e polimorfismo na prática')">Assistir</button>
-        </div>
-
-        <!-- Card 4: Artigo -->
+        <!-- Módulo 3 Slides -->
         <div class="material-card" data-type="artigo">
-          <div class="material-type-badge artigo">ARTIGO</div>
-          <h2 class="material-card-title">Interfaces em POO</h2>
-          <p class="material-card-desc">Entenda como as interfaces ajudam na construção de sistemas flexíveis.</p>
-          <button class="btn-material artigo" onclick="openMaterial('artigo2')">LER AGORA</button>
-        </div>
-
-        <!-- Card 5: E-book -->
-        <div class="material-card" data-type="artigo">
-          <div class="material-type-badge ebook">E-BOOK</div>
-          <h2 class="material-card-title">Boas práticas e clean code</h2>
-          <p class="material-card-desc">Aprenda boas práticas para escrever código limpo e sustentável.</p>
-          <button class="btn-material ebook" onclick="openMaterial('ebook2')">DOWNLOAD</button>
-        </div>
-
-        <!-- Card 6: Exercício -->
-        <div class="material-card" data-type="exercicio">
-          <div class="material-type-badge exercicio">EXERCÍCIOS</div>
-          <h2 class="material-card-title">Exercícios de POO com resolução</h2>
-          <p class="material-card-desc">Vídeo aula explicando herança e polimorfismo com exemplos.</p>
-          <button class="btn-material exercicio" onclick="openMaterial('exercicio1')">RESOLVER</button>
-        </div>
-
-        <!-- Card 7: Vídeo -->
-        <div class="material-card" data-type="video">
-          <div class="material-type-badge video">VÍDEO</div>
-          <h2 class="material-card-title">Design Patterns explicados</h2>
-          <p class="material-card-desc">Uma visão geral sobre os principais padrões de projeto em POO.</p>
-          <button class="btn-material video" onclick="openVideo('https://www.youtube.com/embed/dQw4w9WgXcQ', 'Design Patterns explicados')">Assistir</button>
-        </div>
-
-        <!-- Card 8: Exercício -->
-        <div class="material-card" data-type="exercicio">
-          <div class="material-type-badge exercicio">EXERCÍCIOS</div>
-          <h2 class="material-card-title">Desafio: Refatore este código</h2>
-          <p class="material-card-desc">Pratique clean code refatorando exemplos reais com má qualidade.</p>
-          <button class="btn-material exercicio" onclick="openMaterial('exercicio2')">RESOLVER</button>
+          <div class="material-type-badge ebook">SLIDES</div>
+          <h2 class="material-card-title">Slides Módulo 3 - Estruturas Avançadas em POO</h2>
+          <p class="material-card-desc">Material de apoio focado em segurança de software com POO.</p>
+          <a class="btn-material ebook" style="text-decoration: none; display: inline-block; text-align: center;" href="https://drive.google.com/file/d/1c2FyL56BpCH2Ej_YRZ2YeMUe4mS0SFGS/view?usp=sharing" target="_blank">BAIXAR</a>
         </div>
 
       </div>

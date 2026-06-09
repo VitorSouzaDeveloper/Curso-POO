@@ -3,12 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aula – POO</title>
-  <meta name="description" content="Visualização de aula do curso de Programação Orientada à Objetos." />
+  <title>Exercícios – POO</title>
+  <meta name="description" content="Exercícios interativos do curso de Programação Orientada à Objetos." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
 </head>
@@ -39,11 +38,9 @@
   <div class="breadcrumb-bar">
     <div class="container">
       <nav class="breadcrumb" aria-label="breadcrumb">
-        <a href="aulas.html">Módulo 2</a>
+        <a href="aulas.html">Módulos</a>
         <span class="breadcrumb-sep">→</span>
-        <span>Apresentando o POO</span>
-        <span class="breadcrumb-sep">→</span>
-        <span>Aula 3</span>
+        <span id="breadcrumbModuleTitle">Exercícios</span>
       </nav>
     </div>
   </div>
@@ -53,23 +50,26 @@
 
     <!-- SIDEBAR -->
     <aside class="lesson-sidebar" id="lessonSidebar">
-      <!-- Populated by js/aula.js -->
+      <!-- Populated dynamically if needed, or we can just leave it for the exercise page -->
     </aside>
 
     <!-- MAIN CONTENT -->
     <main class="lesson-main" id="lessonContent">
+      <div class="lesson-block">
+        <h1 class="lesson-title" id="quizTitle">Lista de Exercícios</h1>
+        <p class="lesson-intro">Teste seus conhecimentos. Ao selecionar uma alternativa, você receberá um feedback na hora!</p>
+        
+        <div id="quizContainer">
+          <!-- Populated by js/exercicio.js -->
+        </div>
 
-      <div id="dynamicLessonContent">
-        <!-- Populated by js/aula.js -->
+        <!-- NAVEGAÇÃO -->
+        <div class="lesson-nav-buttons">
+          <a href="aulas.html" class="btn-lesson-nav prev" style="text-align:center; display:block;">Voltar para as Aulas</a>
+        </div>
       </div>
-
-      <!-- NAVEGAÇÃO ENTRE AULAS -->
-      <div class="lesson-nav-buttons">
-        <button class="btn-lesson-nav prev" id="prevLesson">← Aula anterior</button>
-        <button class="btn-lesson-nav next" id="nextLesson">Próxima aula →</button>
-      </div>
-
     </main>
+
   </div>
 
   <!-- FOOTER -->
@@ -88,6 +88,6 @@
   </footer>
 
   <script src="js/main.js"></script>
-  <script src="js/aula.js"></script>
+  <script src="js/exercicio.js"></script>
 </body>
 </html>
