@@ -57,9 +57,9 @@ document.addEventListener('DOMContentLoaded', () => {
   if (overallProgressEl) {
     const completedData = JSON.parse(localStorage.getItem('poo-completed-lessons') || '{}');
     let totalCompleted = 0;
-    const totalAulas = 9; // 4 + 3 + 2
+    const totalAulas = 14; // 5 + 3 + 2 + 3 + 1
 
-    const moduleTotals = { 1: 4, 2: 3, 3: 2 };
+    const moduleTotals = { 1: 5, 2: 3, 3: 3, 4: 3 };
 
     document.querySelectorAll('.module-card').forEach(card => {
       const modId = card.getAttribute('data-module');

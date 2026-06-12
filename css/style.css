@@ -78,6 +78,35 @@
   --badge-exercicio: #E8735C;
 }
 
+/* Force dark theme for the entire home page */
+[data-theme="light"] body.home-page {
+  --bg-body: #0F1923 !important;
+  --bg-card: #182635;
+  --bg-card-hover: #1E3044;
+  --bg-code: #0D1520;
+  --bg-hero: linear-gradient(135deg,#0F1923 0%,#162536 50%,#0B1018 100%);
+  --text-primary: #E8ECF1;
+  --text-secondary: #A0AEC0;
+  --text-muted: #6B7F96;
+  --border: #253446;
+  --shadow: 0 2px 12px rgba(0,0,0,0.25);
+  --shadow-hover: 0 6px 24px rgba(0,0,0,0.4);
+  --progress-bg: #253446;
+  --callout-bg: #14302F;
+  --callout-border: #33C4CC;
+  --modal-bg: rgba(0,0,0,0.7);
+}
+
+/* Allow ONLY the navbar to become light on the home page */
+[data-theme="light"] body.home-page .navbar {
+  --bg-nav: #FFFFFF;
+  --text-primary: #1B2A38;
+  --text-secondary: #4A5568;
+  --border: #D8DEE6;
+  --bg-card: #FFFFFF;
+  --bg-card-hover: #F5F7FA;
+}
+
 /* ---------- Reset ---------- */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}

@@ -6,10 +6,11 @@ const COURSE_DATA = {
   1: {
     title: "Introdução",
     aulas: [
-      { id: "1", title: "Aula 1 - Módulo 1 | POO", videoId: "CZnFXGVxy6A" },
-      { id: "2", title: "Aula 2 - Módulo 1 | POO", videoId: "o_qkq9UNaJk" },
-      { id: "3", title: "Aula 3 - Módulo 1 | POO", videoId: "ZEfO7f3pEGs" },
-      { id: "4", title: "Aula 4 - Módulo 1 | POO", videoId: "c0wftTbOBX8" }
+      { id: "1", title: "Ementa | POO", videoId: "L3MEheBuAW8" },
+      { id: "2", title: "Aula 1 - Módulo 1 | POO", videoId: "CZnFXGVxy6A" },
+      { id: "3", title: "Aula 2 - Módulo 1 | POO", videoId: "o_qkq9UNaJk" },
+      { id: "4", title: "Aula 3 - Módulo 1 | POO", videoId: "ZEfO7f3pEGs" },
+      { id: "5", title: "Aula 4 - Módulo 1 | POO", videoId: "c0wftTbOBX8" }
     ]
   },
   2: {
@@ -24,7 +25,16 @@ const COURSE_DATA = {
     title: "Estruturas Avançadas em POO",
     aulas: [
       { id: "1", title: "Aula 1 - Módulo 3 | POO", videoId: "qkF91uYZONA" },
-      { id: "2", title: "Aula 2 - Módulo 3 | POO", videoId: "uWHa-2jgHMo" }
+      { id: "2", title: "Aula 2 - Módulo 3 | POO", videoId: "uWHa-2jgHMo" },
+      { id: "3", title: "Agradecimentos | POO", videoId: "fbdZN0_0Tyw" }
+    ]
+  },
+  4: {
+    title: "Exercícios Práticos",
+    aulas: [
+      { id: "1", title: "Exercícios - M1 | POO", videoId: "9_5C1EjfwVU" },
+      { id: "2", title: "Exercícios - M2 | POO", videoId: "vFwu1kTVybU" },
+      { id: "3", title: "Exercícios - M3 | POO", videoId: "urc2PK9uzkk" }
     ]
   }
 };
